@@ -98,7 +98,7 @@
                 <version>2.19</version>
                 <configuration>
                   <excludes>
-                    <exclude>ucll.project.ui.*.*</exclude>
+                    <exclude>ucll.project.ui.*Test</exclude>
                   </excludes>
                 </configuration>
             </plugin>
