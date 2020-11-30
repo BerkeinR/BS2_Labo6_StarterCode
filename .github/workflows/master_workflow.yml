@@ -38,4 +38,4 @@ jobs:
         file: ./dockerfile
         platforms: linux/amd64,linux/arm64,linux/386
         push: true
-        tags: berkeinr/BS2-PE3:latest
+        tags: berkeinr/bs2-pe3:latest
