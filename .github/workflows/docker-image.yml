@@ -23,5 +23,5 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: berkein/bs2-pe4:latest
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
