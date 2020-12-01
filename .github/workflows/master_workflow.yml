@@ -30,19 +30,7 @@ jobs:
         name: ${{ secrets.DOCKERHUB_USERNAME }}/bs2-pe4:latest
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Generate build number
-      uses: einaregilsson/build-number@v3
+    - uses: actions/checkout@v1
+    - uses: ncipollo/release-action@v1
       with:
-        token: ${{secrets.github_token}}      
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      with:
-        tag_name: v1.${{ steps.buildnumber.outputs.build_number }}
-        release_name: Release v1.${{ steps.buildnumber.outputs.build_number }}
-        draft: false
-        prerelease: false
+        token: ${{ secrets.GITHUB_TOKEN }}
